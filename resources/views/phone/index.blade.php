@@ -25,9 +25,9 @@
         <tbody>
           @forelse ($phones as $phone)
             <tr>
-              <td>{{ $phone->id }}</td>
-              <td>{{ $phone->phone_number }}</td>
-              <td style="width:240px;">
+              <td data-label="Id">{{ $phone->id }}</td>
+              <td data-label="Telefone">{{ $phone->phone_number }}</td>
+              <td style="width:240px;" class="actions-td">
                 <a class='btn btn-warning' href=" {{ route('contacts.phones.edit',  ['contact'=>$contact_id, 'phone'=>$phone->id]) }}"><i class="fas fa-edit"></i></a>
                 <a class='btn btn-danger' href=" {{ route('contacts.phones.destroy', ['contact'=>$contact_id, 'phone'=>$phone->id]) }} " 
                     onclick="event.preventDefault(); if(confirm('Deseja apagar o Telefone')){document.getElementById('form-telefone-delete-{{ $phone->id }}').submit();}"

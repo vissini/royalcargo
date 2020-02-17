@@ -60,14 +60,14 @@
         <tbody>
           @forelse ($companies as $company)
             <tr>
-              <td>{{ $company->id }}</td>
-              <td>{{ $company->name }}</td>
-              <td>{{ $company->document_number_formatted }}</td>
-              <td>{{ $company->city }}</td>
-              <td>
+              <td data-label="Id">{{ $company->id }}</td>
+              <td data-label="Nome">{{ $company->name }}</td>
+              <td data-label="CPF/CNPJ">{{ $company->document_number_formatted }}</td>
+              <td data-label="Cidade">{{ $company->city }}</td>
+              <td data-label="Contatos (Clique para ver)">
                 <button type="button" class="btn btn-link" data-toggle="popover" title="Contatos" data-content="{{ $company->contact_detail }}">{{$company->contact_name}}</button>
               </td>
-              <td style="width:140px;" class="pl-3">
+              <td style="width:140px;" class="pl-3 actions-td">
                 <a class='btn btn-info btn-sm' href=" {{ route('companies.contacts.index',  ['company'=>$company->id]) }}" alt="Contatos"><i class="fas fa-users"></i></a>
                 <a class='btn btn-warning btn-sm' href=" {{ route('companies.edit',  ['company'=>$company->id]) }}"><i class="fas fa-edit"></i></a>
                 <a class='btn btn-danger btn-sm' href=" {{ route('companies.destroy', ['company'=>$company->id]) }} " 

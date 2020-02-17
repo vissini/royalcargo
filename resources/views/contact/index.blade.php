@@ -26,16 +26,16 @@
       <tbody>
         @forelse ($contacts as $contact)
           <tr>
-            <td>{{ $contact->id }}</td>
-            <td>{{ $contact->name }}</td>
-            <td>
+            <td data-label="Id">{{ $contact->id }}</td>
+            <td data-label="Nome">{{ $contact->name }}</td>
+            <td data-label="Telefones">
               @forelse ($contact->phones as $phone)
                 <span>{{ $phone->phone_number }}</span>
               @empty
               -
               @endforelse
             </td>
-            <td style="width:240px;">
+            <td style="width:240px;" class="actions-td">
               <a class='btn btn-info btn-sm' href=" {{ route('contacts.phones.index',  ['contact'=>$contact->id]) }}" alt="Telefone"><i class="fas fa-phone"></i></a>
               <a class='btn btn-warning' href=" {{ route('companies.contacts.edit',  ['company'=>$company_id, 'contact'=>$contact->id]) }}"><i class="fas fa-edit"></i></a>
               <a class='btn btn-danger' href=" {{ route('companies.contacts.destroy', ['company'=>$company_id, 'contact'=>$contact->id]) }} " 
