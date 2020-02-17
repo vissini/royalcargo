@@ -2,22 +2,24 @@
 
 Este teste foi criado para auxílio na avaliação de suas atuais habilidades. Desta forma
 sugerimos a criação de um CRUD simples, de acordo com os requisitos abaixo:
+
 O contato deverá ser composto por:
-    - Empresa;
-    - Nome;
-    - Data/hora de cadastro;
-    - Data/hora de alteração;
-    - Telefone (Quantidade de telefones é variável).
+- Empresa;
+- Nome;
+- Data/hora de cadastro;
+- Data/hora de alteração;
+- Telefone (Quantidade de telefones é variável).
 
 A empresa deverá ser composta por:
-    - Nome;
-    - CPF ou CNPJ;;
-    - Município;
+- Nome;
+- CPF ou CNPJ;;
+- Município;
 
 ## Regras
 Caso a empresa seja pessoa física, é necessário cadastrar o RG e a “Data de nascimento”;
 Caso a empresa seja pessoa jurídica é necessário cadastrar o “Nome Fantasia”
 A listagem de clientes deverá conter filtros por Nome, CPF/CNPJ.
+
 Funcionalidade extra
 Possibilidade de listagem de clientes através de uma api REST.
 
