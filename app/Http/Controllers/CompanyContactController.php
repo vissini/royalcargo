@@ -25,12 +25,6 @@ class CompanyContactController extends Controller
          return view('contact.create', compact('contact', 'company_id'));
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(CompanyContactRequest $request)
     {
         $contact = Contact::create($request->all());

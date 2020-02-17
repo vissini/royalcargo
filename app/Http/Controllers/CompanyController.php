@@ -47,12 +47,15 @@ class CompanyController extends Controller
             $contact_name = "";
             $contact_detail = "";
             foreach($companies[$i]->contacts as $contact){
-                $contact_name .= $contact->name.", ";
+                if($contact_name != "") $contact_name .=  ", ";
+                $contact_name .= $contact->name;
                 $contact_detail .= "<p><b>$contact->name :</b> ";
+                $phone_detail = "";
                 foreach($contact->phones as $phone){
-                    $contact_detail .= $phone->phone_number.", ";
+                    if($phone_detail != "") $phone_detail .= ", ";
+                    $phone_detail .= $phone->phone_number;
                 }
-                $contact_detail .= "</p>";
+                $contact_detail .= $phone_detail."</p>";
             }
             $companies[$i]->contact_name = $contact_name;    
             $companies[$i]->contact_detail = $contact_detail;

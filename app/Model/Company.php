@@ -26,11 +26,6 @@ class Company extends Model
         return $this->hasMany(Contact::class);
     }
 
-    public function phones()
-    {
-        return $this->hasManyThrough('App\Model\Phone', 'App\Model\Contact');
-    }
-
     public function getDocumentNumberFormattedAttribute(){
         $document = $this->document_number;
         if(!empty($document)){

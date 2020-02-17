@@ -12,12 +12,11 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('/companies');
 });
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('companies', 'CompanyController')->middleware('auth');
 Route::resource('contacts', 'ContactController')->middleware('auth');
 Route::resource('companies.contacts', 'CompanyContactController')->middleware('auth');

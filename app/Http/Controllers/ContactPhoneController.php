@@ -25,13 +25,7 @@ class ContactPhoneController extends Controller
          $contact_id = $contact->id;
          return view('phone.create', compact('phone', 'contact_id'));
     }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+    
     public function store(ContactPhoneRequest $request)
     {
         $phone = Phone::create($request->all());

@@ -80,7 +80,7 @@
               </td>
             </tr>
           @empty
-            <tr><td colspan="2">Nenhum registro encontrado!</td></tr>
+            <tr><td colspan="6">Nenhum registro encontrado!</td></tr>
           @endforelse
         </tbody>
       </table>
