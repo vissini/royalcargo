@@ -12,7 +12,7 @@ O contato deverá ser composto por:
 
 A empresa deverá ser composta por:
 - Nome;
-- CPF ou CNPJ;;
+- CPF ou CNPJ;
 - Município;
 
 ## Regras
@@ -20,7 +20,7 @@ Caso a empresa seja pessoa física, é necessário cadastrar o RG e a “Data de
 Caso a empresa seja pessoa jurídica é necessário cadastrar o “Nome Fantasia”
 A listagem de clientes deverá conter filtros por Nome, CPF/CNPJ.
 
-Funcionalidade extra
+###### Funcionalidade extra
 Possibilidade de listagem de clientes através de uma api REST.
 
 
